@@ -1,0 +1,13 @@
+apiVersion: k8s.nginx.org/v1alpha1
+kind: GlobalConfiguration
+metadata:
+  name: nginx-configuration
+  namespace: nginx-ingress
+Spec:
+  listeners:
+    - name: syslog-udp
+      port: 541
+      protocol: UDP
+    - name: mysql-tcp
+      port: 5353
+      protocol: TCP
